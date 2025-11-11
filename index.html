@@ -11,15 +11,16 @@
   <!-- Ícones -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Animações -->
+  <!-- Animações AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- CSS Externo -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- ================= HEADER / NAVBAR ================= -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
@@ -43,7 +44,7 @@
     </nav>
   </header>
 
-  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <!-- ================= MAIN ================= -->
   <main>
 
     <!-- HERO -->
@@ -66,9 +67,10 @@
       </p>
 
       <div class="row mt-5">
+        <!-- Produto 1 -->
         <div class="col-md-4" data-aos="zoom-in">
           <div class="card product-card shadow-sm">
-            <img src="img/kimono preto.png" alt="Kimono Premium">
+            <img src="img/kimono preto.png" alt="Kimono Premium" class="img-fluid rounded-top">
             <div class="card-body">
               <h5>Kimono Premium Pro</h5>
               <p class="text-muted">Ideal para competidores de elite. Leve, resistente e estiloso.</p>
@@ -77,9 +79,10 @@
           </div>
         </div>
 
+        <!-- Produto 2 -->
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card product-card shadow-sm">
-            <img src="img/kimono shadow.png" alt="Kimono Elite">
+            <img src="img/kimono shadow.png" alt="Kimono Elite" class="img-fluid rounded-top">
             <div class="card-body">
               <h5>Kimono Elite X</h5>
               <p class="text-muted">Construído com tecido ultra leve e corte ergonômico.</p>
@@ -88,9 +91,10 @@
           </div>
         </div>
 
+        <!-- Produto 3 -->
         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="card product-card shadow-sm">
-            <img src="img/kimono vermelho.png" alt="Kimono Training">
+            <img src="img/kimono vermelho.png" alt="Kimono Training" class="img-fluid rounded-top">
             <div class="card-body">
               <h5>Kimono Training Flex</h5>
               <p class="text-muted">Feito para treinos intensos, máxima mobilidade e conforto.</p>
@@ -109,17 +113,19 @@
           <div class="col-md-4" data-aos="fade-up">
             <i class="bi bi-shield-check fs-1 mb-3 text-danger"></i>
             <h5>Qualidade Garantida</h5>
-            <p class="text-light">Materiais testados por atletas profissionais para máximo desempenho.</p>
+            <p>Materiais testados por atletas profissionais para máximo desempenho.</p>
           </div>
+
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <i class="bi bi-lightning-charge fs-1 mb-3 text-danger"></i>
             <h5>Tecnologia e Inovação</h5>
-            <p class="text-light">Nossos tecidos contam com tecnologia anti-odor e secagem rápida.</p>
+            <p>Nossos tecidos contam com tecnologia anti-odor e secagem rápida.</p>
           </div>
+
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-people fs-1 mb-3 text-danger"></i>
             <h5>Para Todos os Lutadores</h5>
-            <p class="text-light">Modelos masculinos e femininos com corte anatômico e ajuste perfeito.</p>
+            <p>Modelos masculinos e femininos com corte anatômico e ajuste perfeito.</p>
           </div>
         </div>
       </div>
@@ -138,14 +144,16 @@
 
   </main>
 
-  <!-- BOTÃO WHATSAPP -->
-  <a href="https://wa.me/5599999999999" class="position-fixed bottom-0 end-0 m-4 btn btn-success rounded-circle shadow-lg" style="width:60px; height:60px; display:flex; align-items:center; justify-content:center; z-index:999;">
+  <!-- ================= BOTÃO WHATSAPP ================= -->
+  <a href="https://contate.me/5521990043057"
+     class="position-fixed bottom-0 end-0 m-4 btn btn-success rounded-circle shadow-lg"
+     style="width:60px; height:60px; display:flex; align-items:center; justify-content:center; z-index:999;">
     <i class="bi bi-whatsapp fs-3"></i>
   </a>
 
-  <!-- RODAPÉ -->
+  <!-- ================= FOOTER ================= -->
   <footer>
-    <div class="container">
+    <div class="container text-center">
       <div class="mb-3">
         <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
         <a href="#" class="text-white me-3"><i class="bi bi-whatsapp fs-4"></i></a>
@@ -155,11 +163,12 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- ================= SCRIPTS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 900, once: true });
   </script>
+
 </body>
 </html>

@@ -11,16 +11,23 @@
   <!-- Ícones -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS (animações ao rolar) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS externo -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <!-- ================= NAVBAR ================= -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold text-uppercase" href="index.html">
-        <i class="bi bi-fire"></i> Kimono Fight
+        <i class="bi bi-fire me-2"></i>Kimono Fight
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -36,268 +43,137 @@
     </div>
   </nav>
 
-  <!-- ================= MAIN ================= -->
-  <main class="container py-5" style="padding-top: 100px;">
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <main class="container py-5" style="padding-top: 110px;">
 
-    <!-- Cabeçalho -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-uppercase">Coleção <span style="color:#e50914;">2025</span></h2>
-      <p class="text-muted">Explore nossos kimonos com performance máxima e estilo imbatível.</p>
-    </div>
+    <!-- Cabeçalho da seção -->
+    <section class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold text-uppercase">Nossos <span class="text-danger">Produtos</span></h2>
+      <p class="text-muted">Escolha o kimono ideal para seu estilo e evolução no Jiu-Jitsu.</p>
+      <hr class="w-25 mx-auto border-2 border-dark">
+    </section>
 
-    <!-- Filtros -->
-    <div class="d-flex flex-wrap justify-content-between align-items-center mb-5 gap-3">
-      <div class="d-flex gap-2 flex-wrap">
-        <select class="form-select" style="max-width: 220px;">
-          <option selected>Todas as categorias</option>
-          <option>Tradicional</option>
-          <option>Premium</option>
-          <option>Edição Limitada</option>
-        </select>
-        <select class="form-select" style="max-width: 180px;">
-          <option selected>Ordenar por</option>
-          <option>Mais recente</option>
-          <option>Mais vendido</option>
-          <option>Preço: menor → maior</option>
-          <option>Preço: maior → menor</option>
-        </select>
-      </div>
+    <!-- Filtros e busca -->
+    <section class="mb-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <div class="d-flex gap-2 flex-wrap">
+          <select class="form-select" style="max-width: 220px;">
+            <option selected>Todas as categorias</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Infantil</option>
+            <option>Edição Limitada</option>
+          </select>
 
-      <div class="input-group" style="max-width: 320px;">
-        <input type="text" class="form-control" placeholder="Buscar produto...">
-        <button class="btn btn-dark"><i class="bi bi-search"></i></button>
-      </div>
-    </div>
+          <select class="form-select" style="max-width: 200px;">
+            <option selected>Ordenar por</option>
+            <option>Mais recente</option>
+            <option>Mais vendido</option>
+            <option>Preço: menor → maior</option>
+            <option>Preço: maior → menor</option>
+          </select>
+        </div>
 
-    <!-- Produtos -->
-    <div class="row g-4">
-
-      <!-- PRODUTO 1 -->
-      <div class="col-xl-4 col-md-6">
-        <div class="card border-0 shadow-sm h-100 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="img/kimono preto.png" class="img-fluid rounded-top" alt="Kimono Shadow X">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Novo</span>
-            <div class="position-absolute top-0 end-0 m-2 d-flex gap-2">
-              <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></button>
-              <button class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#produtoModal1">
-                <i class="bi bi-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow X</h5>
-            <p class="text-muted small">Tecido DryFlex ultra leve e costura tripla reforçada.</p>
-            <div class="text-warning mb-2">
-              ★★★★☆ <span class="small text-muted">(4.8)</span>
-            </div>
-            <p class="fw-bold fs-5 mb-3">R$ 299,90</p>
-            <button class="btn w-100"><i class="bi bi-cart3 me-1"></i> Adicionar ao Carrinho</button>
-          </div>
+        <div class="input-group" style="max-width: 320px;">
+          <input type="text" class="form-control" placeholder="Buscar produto...">
+          <button class="btn btn-dark"><i class="bi bi-search"></i></button>
         </div>
       </div>
-      <!-- PRODUTO 2 -->
-      <div class="col-xl-4 col-md-6">
+    </section>
+
+    <!-- Grade de produtos -->
+    <section class="row g-4">
+
+      <!-- ================= PRODUTO 1 ================= -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
         <div class="card border-0 shadow-sm h-100 product-card">
           <div class="position-relative overflow-hidden">
-            <img src="img/kimono shadow.png" class="img-fluid rounded-top" alt="Kimono Shadow X">
+            <img src="img/kimono preto.png" alt="Nome do Produto" class="img-fluid rounded-top">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">Novo</span>
-            <div class="position-absolute top-0 end-0 m-2 d-flex gap-2">
-              <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></button>
-              <button class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#produtoModal1">
-                <i class="bi bi-eye"></i>
-              </button>
-            </div>
           </div>
           <div class="card-body text-center">
-            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow X</h5>
-            <p class="text-muted small">Tecido DryFlex ultra leve e costura tripla reforçada.</p>
-            <div class="text-warning mb-2">
-              ★★★★☆ <span class="small text-muted">(4.8)</span>
-            </div>
-            <p class="fw-bold fs-5 mb-3">R$ 499,90</p>
-            <button class="btn w-100"><i class="bi bi-cart3 me-1"></i> Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUTO 4 -->
-      <div class="col-xl-4 col-md-6">
-        <div class="card border-0 shadow-sm h-100 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="img/kimono shadow.png" class="img-fluid rounded-top" alt="Kimono Shadow X">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Novo</span>
-            <div class="position-absolute top-0 end-0 m-2 d-flex gap-2">
-              <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></button>
-              <button class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#produtoModal1">
-                <i class="bi bi-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow X</h5>
-            <p class="text-muted small">Tecido DryFlex ultra leve e costura tripla reforçada.</p>
-            <div class="text-warning mb-2">
-              ★★★★☆ <span class="small text-muted">(4.8)</span>
-            </div>
-            <p class="fw-bold fs-5 mb-3">R$ 499,90</p>
-            <button class="btn w-100"><i class="bi bi-cart3 me-1"></i> Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUTO 5 -->
-      <div class="col-xl-4 col-md-6">
-        <div class="card border-0 shadow-sm h-100 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="img/kimono shadow.png" class="img-fluid rounded-top" alt="Kimono Shadow X">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Novo</span>
-            <div class="position-absolute top-0 end-0 m-2 d-flex gap-2">
-              <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></button>
-              <button class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#produtoModal1">
-                <i class="bi bi-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow X</h5>
-            <p class="text-muted small">Tecido DryFlex ultra leve e costura tripla reforçada.</p>
-            <div class="text-warning mb-2">
-              ★★★★☆ <span class="small text-muted">(4.8)</span>
-            </div>
-            <p class="fw-bold fs-5 mb-3">R$ 499,90</p>
-            <button class="btn w-100"><i class="bi bi-cart3 me-1"></i> Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUTO 6 -->
-      <div class="col-xl-4 col-md-6">
-        <div class="card border-0 shadow-sm h-100 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="img/kimono shadow.png" class="img-fluid rounded-top" alt="Kimono Shadow X">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Novo</span>
-            <div class="position-absolute top-0 end-0 m-2 d-flex gap-2">
-              <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></button>
-              <button class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#produtoModal1">
-                <i class="bi bi-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow X</h5>
-            <p class="text-muted small">Tecido DryFlex ultra leve e costura tripla reforçada.</p>
-            <div class="text-warning mb-2">
-              ★★★★☆ <span class="small text-muted">(4.8)</span>
-            </div>
-            <p class="fw-bold fs-5 mb-3">R$ 499,90</p>
-            <button class="btn w-100"><i class="bi bi-cart3 me-1"></i> Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </div>
-      <!-- PRODUTO 7 -->
-      <div class="col-xl-4 col-md-6">
-        <div class="card border-0 shadow-sm h-100 product-card">
-          <div class="position-relative overflow-hidden">
-            <img src="img/kimono shadow.png" class="img-fluid rounded-top" alt="Kimono Shadow X">
-            <span class="badge bg-danger position-absolute top-0 start-0 m-2">Novo</span>
-            <div class="position-absolute top-0 end-0 m-2 d-flex gap-2">
-              <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-heart"></i></button>
-              <button class="btn btn-light btn-sm rounded-circle" data-bs-toggle="modal" data-bs-target="#produtoModal1">
-                <i class="bi bi-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="card-body text-center">
-            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow X</h5>
-            <p class="text-muted small">Tecido DryFlex ultra leve e costura tripla reforçada.</p>
-            <div class="text-warning mb-2">
-              ★★★★☆ <span class="small text-muted">(4.8)</span>
-            </div>
-            <p class="fw-bold fs-5 mb-3">R$ 499,90</p>
-            <button class="btn w-100"><i class="bi bi-cart3 me-1"></i> Adicionar ao Carrinho</button>
+            <h5 class="fw-bold text-uppercase mb-2">Kimono Preto</h5>
+            <p class="text-muted small">Breve descrição do produto.</p>
+            <p class="fw-bold fs-5 mb-3">R$ 299,99</p>
+            <button class="btn btn-dark w-100">
+              <i class="bi bi-cart3 me-1"></i> Adicionar ao carrinho
+            </button>
           </div>
         </div>
       </div>
 
-    </div>
+      <!-- ================= PRODUTO 2 ================= -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card border-0 shadow-sm h-100 product-card">
+          <img src="img/kimono shadow.png" alt="Nome do Produto" class="img-fluid rounded-top">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-uppercase mb-2">Kimono Shadow</h5>
+            <p class="text-muted small">Breve descrição do produto.</p>
+            <p class="fw-bold fs-5 mb-3">R$ 350,00</p>
+            <button class="btn btn-dark w-100">
+              <i class="bi bi-cart3 me-1"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PRODUTO 3 ================= -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card border-0 shadow-sm h-100 product-card">
+          <img src="img/kimono vermelho.png" alt="Nome do Produto" class="img-fluid rounded-top">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-uppercase mb-2">Kimono Vermelho</h5>
+            <p class="text-muted small">Breve descrição do produto.</p>
+            <p class="fw-bold fs-5 mb-3">R$ 400,00</p>
+            <button class="btn btn-dark w-100">
+              <i class="bi bi-cart3 me-1"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= PRODUTO 4 ================= -->
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card border-0 shadow-sm h-100 product-card">
+          <img src="img/kimono cinza.png" alt="Nome do Produto" class="img-fluid rounded-top">
+          <div class="card-body text-center">
+            <h5 class="fw-bold text-uppercase mb-2">Kimono cinza</h5>
+            <p class="text-muted small">Breve descrição do produto.</p>
+            <p class="fw-bold fs-5 mb-3">R$ 290,00</p>
+            <button class="btn btn-dark w-100">
+              <i class="bi bi-cart3 me-1"></i> Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- COPIE A PARTIR DAQUI PARA ADICIONAR MAIS PRODUTOS -->
+      
+    </section>
   </main>
 
-  <!-- ================= MODAL DE DETALHES ================= -->
-  <div class="modal fade" id="produtoModal1" tabindex="-1" aria-labelledby="produtoModalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-0 shadow-lg">
-        <div class="modal-header bg-dark text-white">
-          <h5 class="modal-title" id="produtoModalLabel1">Kimono Shadow X</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body p-4">
-          <div class="row g-4">
-            <!-- Imagens -->
-            <div class="col-md-6">
-              <div id="carouselProduto1" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner rounded">
-                  <div class="carousel-item active">
-                    <img src="img/kimono shadow.png" class="d-block w-100" alt="Kimono Shadow X 1">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/kimono shadow detalhe1.png" class="d-block w-100" alt="Kimono Shadow X detalhe">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/kimono shadow detalhe2.png" class="d-block w-100" alt="Kimono Shadow X detalhe 2">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduto1" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselProduto1" data-bs-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Detalhes -->
-            <div class="col-md-6">
-              <h4 class="fw-bold mb-3">R$ 499,90</h4>
-              <p class="text-muted">O Kimono Shadow X combina leveza e resistência com tecido DryFlex respirável, ideal para treinos intensos e competições de alto nível.</p>
-
-              <h6 class="fw-semibold mt-4 mb-2">Tamanhos disponíveis:</h6>
-              <div class="d-flex flex-wrap gap-2">
-                <button class="btn btn-outline-dark btn-sm">A0</button>
-                <button class="btn btn-outline-dark btn-sm">A1</button>
-                <button class="btn btn-outline-dark btn-sm">A2</button>
-                <button class="btn btn-outline-dark btn-sm">A3</button>
-                <button class="btn btn-outline-dark btn-sm">A4</button>
-              </div>
-
-              <h6 class="fw-semibold mt-4 mb-2">Características:</h6>
-              <ul class="small text-muted">
-                <li>Tecido leve e respirável DryFlex</li>
-                <li>Costura tripla reforçada nas áreas de impacto</li>
-                <li>Ideal para competição e treino</li>
-                <li>Design moderno com patch Kimono Fight</li>
-              </ul>
-
-              <button class="btn btn-dark w-100 mt-4">
-                <i class="bi bi-cart3 me-2"></i> Adicionar ao carrinho
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ================= FOOTER ================= -->
-  <footer class="text-center py-4">
-    <p class="mb-1">© 2025 Kimono Fight | Desenvolvido com força e paixão pelo Jiu-Jitsu</p>
-    <div>
-      <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-5"></i></a>
-      <a href="#" class="text-dark mx-2"><i class="bi bi-whatsapp fs-5"></i></a>
-      <a href="#" class="text-dark mx-2"><i class="bi bi-envelope fs-5"></i></a>
+  <footer class="text-center py-4 mt-5" data-aos="fade-up">
+    <div class="container">
+      <p class="mb-1">© 2025 Kimono Fight | Desenvolvido com força e paixão pelo Jiu-Jitsu</p>
+      <div>
+        <a href="#" class="text-dark mx-2"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="bi bi-whatsapp fs-5"></i></a>
+        <a href="#" class="text-dark mx-2"><i class="bi bi-envelope fs-5"></i></a>
+      </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // duração da animação
+      once: true, // anima apenas uma vez
+      easing: 'ease-in-out'
+    });
+  </script>
   <script src="js/script.js"></script>
-
 </body>
 </html>
