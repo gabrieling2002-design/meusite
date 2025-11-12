@@ -1,20 +1,24 @@
 /* =========================================
    ESTILO GERAL
    ========================================= */
+
+/* Define o estilo base de todo o site */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
-  scroll-behavior: smooth;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif; /* Fonte moderna e limpa */
+  background-color: #f5f5f5; /* Cor de fundo suave */
+  color: #222; /* Cor do texto principal */
+  scroll-behavior: smooth; /* Rolagem suave ao clicar em links âncora */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
 }
 
+/* Define que todas as imagens ocupem no máximo o tamanho do contêiner */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Aplica negrito aos títulos */
 h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
@@ -22,35 +26,42 @@ h1, h2, h3, h4, h5 {
 /* =========================================
    NAVBAR
    ========================================= */
+
+/* Estilo geral da barra de navegação */
 .navbar {
-  background-color: #0d0d0d;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
+  background-color: #0d0d0d; /* Fundo escuro */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4); /* Sombra sutil abaixo da navbar */
+  transition: all 0.3s ease; /* Transição suave para mudanças */
 }
 
+/* Quando a página é rolada, a navbar muda de cor */
 .navbar.scrolled {
   background-color: #000;
 }
 
+/* Estilo da marca (logo ou nome da loja) */
 .navbar-brand {
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fff !important;
-  text-transform: uppercase;
+  font-weight: 700; /* Negrito */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  color: #fff !important; /* Texto branco */
+  text-transform: uppercase; /* Todas as letras maiúsculas */
 }
 
+/* Links do menu de navegação */
 .nav-link {
-  color: #ccc !important;
+  color: #ccc !important; /* Cor cinza clara */
   font-weight: 500;
   transition: 0.3s ease;
-  position: relative;
+  position: relative; /* Necessário para o efeito de linha abaixo */
 }
 
+/* Efeito ao passar o mouse ou quando o link está ativo */
 .nav-link:hover,
 .nav-link.active {
-  color: #e50914 !important;
+  color: #e50914 !important; /* Fica vermelho */
 }
 
+/* Linha vermelha que aparece sob o link ao passar o mouse */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -62,6 +73,7 @@ h1, h2, h3, h4, h5 {
   transition: width 0.3s;
 }
 
+/* Expande a linha quando o link é hover ou ativo */
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
@@ -70,22 +82,26 @@ h1, h2, h3, h4, h5 {
 /* =========================================
    HERO (Capa Principal)
    ========================================= */
+
+/* Seção de destaque no topo do site */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
-              url('https://images.unsplash.com/photo-1593032465171-bcab6c0f9b72?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), /* Deixa o fundo mais escuro */
+              url('https://images.unsplash.com/photo-1593032465171-bcab6c0f9b72?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat; /* Imagem de fundo */
   color: #fff;
   text-align: center;
-  padding: 160px 20px;
+  padding: 160px 20px; /* Espaçamento interno */
 }
 
+/* Título principal na seção hero */
 .hero h1 {
   font-size: 3.2rem;
   font-weight: 800;
   text-transform: uppercase;
-  text-shadow: 2px 2px 10px #000;
+  text-shadow: 2px 2px 10px #000; /* Sombra no texto */
   margin-bottom: 15px;
 }
 
+/* Subtítulo / descrição abaixo do título principal */
 .hero p {
   font-size: 1.2rem;
   opacity: 0.9;
@@ -93,8 +109,9 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto 25px;
 }
 
+/* Botão principal da seção hero */
 .hero .btn {
-  background-color: #e50914;
+  background-color: #e50914; /* Vermelho marcante */
   color: #fff;
   border: none;
   padding: 12px 32px;
@@ -104,41 +121,49 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 0.5px;
 }
 
+/* Efeito de hover no botão */
 .hero .btn:hover {
   background-color: #b0070f;
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Leve elevação */
 }
 
 /* =========================================
    SEÇÃO DE PRODUTOS
    ========================================= */
+
+/* Cartões dos produtos */
 .product-card {
   transition: all 0.3s ease;
   border: none;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: hidden; /* Garante que a imagem arredondada não vaze */
 }
 
+/* Imagens dos produtos */
 .product-card img {
   height: 260px;
-  object-fit: cover;
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
   transition: transform 0.3s ease;
 }
 
+/* Ao passar o mouse, a imagem aumenta levemente */
 .product-card:hover img {
   transform: scale(1.05);
 }
 
+/* Parte inferior do cartão com informações do produto */
 .product-card .card-body {
   background-color: #fff;
   padding: 20px;
 }
 
+/* Nome do produto */
 .product-card h5 {
   font-weight: 700;
   margin-bottom: 8px;
 }
 
+/* Botão “ver mais” ou “comprar” */
 .product-card .btn {
   background-color: #000;
   color: #fff;
@@ -148,6 +173,7 @@ h1, h2, h3, h4, h5 {
   transition: 0.3s ease;
 }
 
+/* Efeito ao passar o mouse no botão */
 .product-card .btn:hover {
   background-color: #e50914;
   transform: translateY(-2px);
@@ -156,20 +182,25 @@ h1, h2, h3, h4, h5 {
 /* =========================================
    SEÇÃO SOBRE
    ========================================= */
+
+/* Parágrafos da seção sobre */
 .sobre-section p {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 15px;
 }
 
+/* Imagem da seção sobre */
 .sobre-section img {
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra leve */
 }
 
 /* =========================================
    FORMULÁRIO DE CONTATO
    ========================================= */
+
+/* Campos de texto e área de mensagem */
 form input, form textarea {
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -177,12 +208,14 @@ form input, form textarea {
   transition: all 0.3s ease;
 }
 
+/* Efeito de foco ao clicar nos campos */
 form input:focus, form textarea:focus {
   border-color: #e50914;
   box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
   outline: none;
 }
 
+/* Botão de envio do formulário */
 form button {
   background-color: #000;
   color: #fff;
@@ -193,6 +226,7 @@ form button {
   font-weight: 600;
 }
 
+/* Efeito ao passar o mouse no botão do formulário */
 form button:hover {
   background-color: #e50914;
   transform: translateY(-2px);
@@ -201,6 +235,8 @@ form button:hover {
 /* =========================================
    RODAPÉ
    ========================================= */
+
+/* Parte inferior do site */
 footer {
   background-color: #000;
   color: #fff;
@@ -211,6 +247,7 @@ footer {
   letter-spacing: 0.5px;
 }
 
+/* Texto do rodapé */
 footer p {
   margin: 0;
   opacity: 0.9;
@@ -219,6 +256,8 @@ footer p {
 /* =========================================
    RESPONSIVIDADE
    ========================================= */
+
+/* Ajustes para telas menores (celulares/tablets) */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.3rem;
@@ -236,15 +275,19 @@ footer p {
     height: 220px;
   }
 }
+
 /* ==============================
    EFEITOS DE REVELAÇÃO AO ROLAR
    ============================== */
+
+/* Animações suaves quando elementos aparecem na tela */
 .reveal {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.6s ease-out;
 }
 
+/* Estado ativo do efeito (totalmente visível) */
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
@@ -253,6 +296,8 @@ footer p {
 /* ==============================
    NAVBAR COM SOMBRA AO ROLAR
    ============================== */
+
+/* Aplica uma sombra à navbar quando o usuário rola a página */
 .navbar.navbar-shadow {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease;
